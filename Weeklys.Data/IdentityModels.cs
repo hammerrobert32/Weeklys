@@ -34,6 +34,10 @@ namespace Weeklys.Data
 
         public DbSet<Weekly> Weeklys { get; set; }
 
+        public DbSet<Paychecks> Paychecks { get; set; }
+
+        public DbSet<Taxes> Taxes { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder
