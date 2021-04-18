@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace Weeklys.Data
 {
-    public class Weekly
+    public class MoneyFlow
     {
         [Key]
-        public int WeeklyID { get; set; }
+        public int MoneyFlowID { get; set; }
 
         [Required]
         public double Revenue { get; set; }

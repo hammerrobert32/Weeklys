@@ -63,11 +63,19 @@
     <Compile Include="Migrations\202104160223343_InitialMigration.Designer.cs">
       <DependentUpon>202104160223343_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104172326445_Second-Migration.cs" />
+    <Compile Include="Migrations\202104172326445_Second-Migration.Designer.cs">
+      <DependentUpon>202104172326445_Second-Migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104172328317_SecondMigration1.cs" />
+    <Compile Include="Migrations\202104172328317_SecondMigration1.Designer.cs">
+      <DependentUpon>202104172328317_SecondMigration1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Paychecks.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Taxes.cs" />
-    <Compile Include="Weekly.cs" />
+    <Compile Include="MoneyFlow.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -79,6 +87,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104160223343_InitialMigration.resx">
       <DependentUpon>202104160223343_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104172326445_Second-Migration.resx">
+      <DependentUpon>202104172326445_Second-Migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104172328317_SecondMigration1.resx">
+      <DependentUpon>202104172328317_SecondMigration1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

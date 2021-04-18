@@ -32,7 +32,7 @@ namespace Weeklys.Data
             return new ApplicationDbContext();
         }
 
-        public DbSet<Weekly> Weeklys { get; set; }
+        public DbSet<MoneyFlow> MoneyFlow { get; set; }
 
         public DbSet<Paychecks> Paychecks { get; set; }
 

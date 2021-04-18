@@ -20,9 +20,9 @@ namespace Weeklys.Data
         public double AmountPaid { get; set; }
 
         [Required]
-        [ForeignKey(nameof(Weekly))]
-        public int WeeklyID { get; set; }
-        public virtual Weekly Weekly { get; set; }
+        [ForeignKey(nameof(MoneyFlow))]
+        public int MoneyFlowID { get; set; }
+        public virtual MoneyFlow MoneyFlow { get; set; }
     }
 
     public enum Name

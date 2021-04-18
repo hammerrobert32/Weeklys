@@ -11,9 +11,9 @@ namespace Weeklys.Data
     public class Taxes
     {
         [Key]
-        [ForeignKey(nameof(Weekly))]
+        [ForeignKey(nameof(MoneyFlow))]
         public int TaxesID { get; set; }
-        public virtual Weekly Weekly { get; set; }
+        public virtual MoneyFlow MoneyFlow { get; set; }
 
 
         public double State { get; set; }
