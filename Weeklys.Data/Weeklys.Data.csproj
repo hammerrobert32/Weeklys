@@ -71,6 +71,14 @@
     <Compile Include="Migrations\202104172328317_SecondMigration1.Designer.cs">
       <DependentUpon>202104172328317_SecondMigration1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104252010101_UpdatedMoneyFlowDataAnnotations.cs" />
+    <Compile Include="Migrations\202104252010101_UpdatedMoneyFlowDataAnnotations.Designer.cs">
+      <DependentUpon>202104252010101_UpdatedMoneyFlowDataAnnotations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104252024423_AddedGuidToAllTables.cs" />
+    <Compile Include="Migrations\202104252024423_AddedGuidToAllTables.Designer.cs">
+      <DependentUpon>202104252024423_AddedGuidToAllTables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Paychecks.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,6 +101,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104172328317_SecondMigration1.resx">
       <DependentUpon>202104172328317_SecondMigration1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104252010101_UpdatedMoneyFlowDataAnnotations.resx">
+      <DependentUpon>202104252010101_UpdatedMoneyFlowDataAnnotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104252024423_AddedGuidToAllTables.resx">
+      <DependentUpon>202104252024423_AddedGuidToAllTables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -15,6 +15,9 @@ namespace Weeklys.Data
         public int TaxesID { get; set; }
         public virtual MoneyFlow MoneyFlow { get; set; }
 
+        [Required]
+        public Guid OwnerId { get; set; }
+
 
         public double State { get; set; }
 

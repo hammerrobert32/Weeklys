@@ -5,15 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Weeklys.Data
+namespace Weeklys.Models
 {
-    public class MoneyFlow
+    public class MoneyFlowCreate
     {
-        [Key]
-        public int MoneyFlowID { get; set; }
-
-        [Required]
-        public Guid OwnerID { get; set; }
 
         [Required]
         public double Revenue { get; set; }
@@ -27,8 +22,5 @@ namespace Weeklys.Data
         [Required]
         public double Profit { get; set; }
 
-        [Required]
-        [Display(Name = "Created")]
-        public DateTimeOffset CreatedUtc { get; set; }
     }
 }

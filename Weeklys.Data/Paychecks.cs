@@ -14,6 +14,9 @@ namespace Weeklys.Data
         public int PaychecksID { get; set; }
 
         [Required]
+        public Guid OwnerId { get; set; }
+
+        [Required]
         public Name Name { get; set; }
 
         [Required]

@@ -54,11 +54,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MoneyFlowService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Weeklys.Data\Weeklys.Data.csproj">
+      <Project>{35db6399-3a86-455f-adbd-520def59db4f}</Project>
+      <Name>Weeklys.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Weeklys.Models\Weeklys.Models.csproj">
+      <Project>{7b2a2176-6515-4e29-9488-9ce4b6e6d720}</Project>
+      <Name>Weeklys.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
