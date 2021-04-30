@@ -36,5 +36,49 @@ namespace Weeklys.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+
+        public IEnumerable<MoneyFlowListItem> GetMoneyFlows()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .MoneyFlow
+                        .Where(e => e.OwnerID == _userID)
+                        .Select(
+                            e =>
+                                new MoneyFlowListItem
+                                {
+                                    MoneyFlowID = e.MoneyFlowID,
+                                    Profit = e.Profit,
+                                    CreatedUtc = e.CreatedUtc
+                                }
+                        );
+
+                return query.ToArray();
+            }
+        }
+
+        public MoneyFlowDetail GetMoneyFlowByID(int ID)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .MoneyFlow
+                        .Single(e => e.MoneyFlowID == ID && e.OwnerID == _userID);
+                return
+                    new MoneyFlowDetail
+                    {
+                        MoneyFlowID = entity.MoneyFlowID,
+                        Revenue = entity.Revenue,
+                        Expenses = entity.Expenses,
+                        TaxesSum = entity.TaxesSum,
+                        Profit = entity.Profit,
+                        CreatedUtc = entity.CreatedUtc,
+                    };
+            }
+        }
+
     }
 }
