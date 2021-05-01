@@ -238,6 +238,7 @@
     <Content Include="Views\MoneyFlow\Index.cshtml" />
     <Content Include="Views\MoneyFlow\Create.cshtml" />
     <Content Include="Views\MoneyFlow\Details.cshtml" />
+    <Content Include="Views\MoneyFlow\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -56,6 +56,7 @@
   <ItemGroup>
     <Compile Include="MoneyFlowCreate.cs" />
     <Compile Include="MoneyFlowDetail.cs" />
+    <Compile Include="MoneyFlowEdit.cs" />
     <Compile Include="MoneyFlowListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

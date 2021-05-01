@@ -80,5 +80,39 @@ namespace Weeklys.Services
             }
         }
 
+        public bool UpdateMoneyFlow(MoneyFlowEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .MoneyFlow
+                        .Single(e => e.MoneyFlowID == model.MoneyFlowID && e.OwnerID == _userID);
+
+                entity.Revenue = model.Revenue;
+                entity.Expenses = model.Expenses;
+                entity.TaxesSum = model.TaxesSum;
+                entity.Profit = model.Profit;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        //public bool DeleteNote(int noteId)
+        //{
+        //    using (var ctx = new ApplicationDbContext())
+        //    {
+        //        var entity =
+        //            ctx
+        //                .Notes
+        //                .Single(e => e.NoteId == noteId && e.OwnerId == _userId);
+
+        //        ctx.Notes.Remove(entity);
+
+        //        return ctx.SaveChanges() == 1;
+        //    }
+        //}
+
+
     }
 }

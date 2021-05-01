@@ -54,6 +54,48 @@ namespace Weeklys.WebMVC.Controllers
             return View(model);
         }
 
+        public ActionResult Edit(int ID)
+        {
+            var service = CreateMoneyFlowService();
+            var detail = service.GetMoneyFlowByID(ID);
+            var model =
+                new MoneyFlowEdit
+                {
+                    MoneyFlowID = detail.MoneyFlowID,
+                    Revenue = detail.Revenue,
+                    Expenses = detail.Expenses,
+                    TaxesSum = detail.TaxesSum,
+                    Profit = detail.Profit,
+                };
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int ID, MoneyFlowEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            if (model.MoneyFlowID != ID)
+            {
+                ModelState.AddModelError("", "ID Mismatch");
+                return View(model);
+            }
+
+            var service = CreateMoneyFlowService();
+
+            if (service.UpdateMoneyFlow(model))
+            {
+                TempData["SaveResult"] = "Your MoneyFlow was updated.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Your MoneyFlow could not be updated.");
+            return View(model);
+        }
+
+
+
         //Helper method
         private MoneyFlowService CreateMoneyFlowService()
         {
