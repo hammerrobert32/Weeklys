@@ -94,6 +94,29 @@ namespace Weeklys.WebMVC.Controllers
             return View(model);
         }
 
+        [ActionName("Delete")]
+        public ActionResult Delete(int ID)
+        {
+            var svc = CreateMoneyFlowService();
+            var model = svc.GetMoneyFlowByID(ID);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePost(int ID)
+        {
+            var service = CreateMoneyFlowService();
+
+            service.DeleteMoneyFlow(ID);
+
+            TempData["SaveResult"] = "Your MoneyFlow was deleted";
+
+            return RedirectToAction("Index");
+        }
+
 
 
         //Helper method

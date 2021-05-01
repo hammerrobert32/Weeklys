@@ -98,20 +98,20 @@ namespace Weeklys.Services
             }
         }
 
-        //public bool DeleteNote(int noteId)
-        //{
-        //    using (var ctx = new ApplicationDbContext())
-        //    {
-        //        var entity =
-        //            ctx
-        //                .Notes
-        //                .Single(e => e.NoteId == noteId && e.OwnerId == _userId);
+        public bool DeleteMoneyFlow(int moneyID)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .MoneyFlow
+                        .Single(e => e.MoneyFlowID == moneyID && e.OwnerID == _userID);
 
-        //        ctx.Notes.Remove(entity);
+                ctx.MoneyFlow.Remove(entity);
 
-        //        return ctx.SaveChanges() == 1;
-        //    }
-        //}
+                return ctx.SaveChanges() == 1;
+            }
+        }
 
 
     }
