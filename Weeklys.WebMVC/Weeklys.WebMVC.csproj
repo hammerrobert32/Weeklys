@@ -240,6 +240,7 @@
     <Content Include="Views\MoneyFlow\Details.cshtml" />
     <Content Include="Views\MoneyFlow\Edit.cshtml" />
     <Content Include="Views\MoneyFlow\Delete.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\DateTimeOffset.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
