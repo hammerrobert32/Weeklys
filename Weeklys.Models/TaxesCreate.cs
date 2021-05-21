@@ -9,8 +9,6 @@ namespace Weeklys.Models
 {
     public class TaxesCreate
     { 
-        [Required]
-        public int TaxesID { get; set; }
 
         [Required]
         public double State { get; set; }

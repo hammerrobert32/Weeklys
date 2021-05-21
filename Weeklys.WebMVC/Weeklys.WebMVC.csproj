@@ -242,10 +242,14 @@
     <Content Include="Views\MoneyFlow\Edit.cshtml" />
     <Content Include="Views\MoneyFlow\Delete.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\DateTimeOffset.cshtml" />
+    <Content Include="Views\Taxes\Create.cshtml" />
+    <Content Include="Views\Taxes\Delete.cshtml" />
+    <Content Include="Views\Taxes\Details.cshtml" />
+    <Content Include="Views\Taxes\Edit.cshtml" />
+    <Content Include="Views\Taxes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Taxes\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
