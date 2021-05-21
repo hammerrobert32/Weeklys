@@ -12,7 +12,7 @@ namespace Weeklys.WebMVC.Controllers
     [Authorize]
     public class MoneyFlowController : Controller
     {
-        // GET: MoneyFlow
+                                                                                                                        // Gets LIST of MoneyFlows
         public ActionResult Index()
         {
             var service = CreateMoneyFlowService();
@@ -21,12 +21,13 @@ namespace Weeklys.WebMVC.Controllers
             return View(model);
         }
 
-        //Get view for creating a MoneyFlow
+                                                                                                                        // Gets VIEW for creating a MoneyFlow
         public ActionResult Create()
         {
             return View();
         }
 
+                                                                                                                        // CREATES MoneyFlow to database
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(MoneyFlowCreate model)
@@ -46,6 +47,7 @@ namespace Weeklys.WebMVC.Controllers
             return View(model);
         }
 
+                                                                                                                        // Gets VIEW for single MoneyFlow
         public ActionResult Details(int ID)
         {
             var svc = CreateMoneyFlowService();
@@ -54,6 +56,7 @@ namespace Weeklys.WebMVC.Controllers
             return View(model);
         }
 
+                                                                                                                        // Gets VIEW to edit single MoneyFlow
         public ActionResult Edit(int ID)
         {
             var service = CreateMoneyFlowService();
@@ -70,6 +73,7 @@ namespace Weeklys.WebMVC.Controllers
             return View(model);
         }
 
+                                                                                                                        // EDITS single MoneyFLow to database
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int ID, MoneyFlowEdit model)
@@ -94,6 +98,7 @@ namespace Weeklys.WebMVC.Controllers
             return View(model);
         }
 
+                                                                                                                         // Gets VIEW to delete single MoneyFlow
         [ActionName("Delete")]
         public ActionResult Delete(int ID)
         {
@@ -102,7 +107,8 @@ namespace Weeklys.WebMVC.Controllers
 
             return View(model);
         }
-
+        
+                                                                                                                         // DELETES single MoneyFlow from database
         [HttpPost]
         [ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -119,7 +125,7 @@ namespace Weeklys.WebMVC.Controllers
 
 
 
-        //Helper method
+                                                                                                                         // Helper method
         private MoneyFlowService CreateMoneyFlowService()
         {
             var userID = Guid.Parse(User.Identity.GetUserId());
