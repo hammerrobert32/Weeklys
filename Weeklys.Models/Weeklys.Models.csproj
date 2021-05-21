@@ -59,6 +59,10 @@
     <Compile Include="MoneyFlowEdit.cs" />
     <Compile Include="MoneyFlowListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TaxesCreate.cs" />
+    <Compile Include="TaxesDetail.cs" />
+    <Compile Include="TaxesEdit.cs" />
+    <Compile Include="TaxesListItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

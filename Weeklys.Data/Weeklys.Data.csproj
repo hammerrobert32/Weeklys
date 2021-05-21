@@ -79,6 +79,10 @@
     <Compile Include="Migrations\202104252024423_AddedGuidToAllTables.Designer.cs">
       <DependentUpon>202104252024423_AddedGuidToAllTables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105212101475_LastMigration.cs" />
+    <Compile Include="Migrations\202105212101475_LastMigration.Designer.cs">
+      <DependentUpon>202105212101475_LastMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Paychecks.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -107,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104252024423_AddedGuidToAllTables.resx">
       <DependentUpon>202104252024423_AddedGuidToAllTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105212101475_LastMigration.resx">
+      <DependentUpon>202105212101475_LastMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

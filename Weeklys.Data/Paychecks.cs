@@ -26,6 +26,11 @@ namespace Weeklys.Data
         [ForeignKey(nameof(MoneyFlow))]
         public int MoneyFlowID { get; set; }
         public virtual MoneyFlow MoneyFlow { get; set; }
+
+        [Required]
+        [Display(Name = "Created")]
+        public DateTimeOffset CreatedUtc { get; set; }
+
     }
 
     public enum Name
