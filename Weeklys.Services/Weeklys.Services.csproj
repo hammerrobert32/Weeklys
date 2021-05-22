@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MoneyFlowService.cs" />
+    <Compile Include="PaychecksService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaxesService.cs" />
   </ItemGroup>

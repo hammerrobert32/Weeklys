@@ -83,6 +83,10 @@
     <Compile Include="Migrations\202105212101475_LastMigration.Designer.cs">
       <DependentUpon>202105212101475_LastMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105220046004_LastLastMigration.cs" />
+    <Compile Include="Migrations\202105220046004_LastLastMigration.Designer.cs">
+      <DependentUpon>202105220046004_LastLastMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Paychecks.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -114,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105212101475_LastMigration.resx">
       <DependentUpon>202105212101475_LastMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105220046004_LastLastMigration.resx">
+      <DependentUpon>202105220046004_LastLastMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

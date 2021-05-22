@@ -72,5 +72,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Weeklys.Data\Weeklys.Data.csproj">
+      <Project>{35db6399-3a86-455f-adbd-520def59db4f}</Project>
+      <Name>Weeklys.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
