@@ -58,6 +58,10 @@
     <Compile Include="MoneyFlowDetail.cs" />
     <Compile Include="MoneyFlowEdit.cs" />
     <Compile Include="MoneyFlowListItem.cs" />
+    <Compile Include="PaychecksCreate.cs" />
+    <Compile Include="PaychecksDetail.cs" />
+    <Compile Include="PaychecksEdit.cs" />
+    <Compile Include="PaychecksListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaxesCreate.cs" />
     <Compile Include="TaxesDetail.cs" />
