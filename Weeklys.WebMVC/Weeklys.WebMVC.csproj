@@ -243,15 +243,19 @@
     <Content Include="Views\MoneyFlow\Edit.cshtml" />
     <Content Include="Views\MoneyFlow\Delete.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\DateTimeOffset.cshtml" />
-    <Content Include="Views\Taxes\Create.cshtml" />
     <Content Include="Views\Taxes\Delete.cshtml" />
     <Content Include="Views\Taxes\Details.cshtml" />
     <Content Include="Views\Taxes\Edit.cshtml" />
     <Content Include="Views\Taxes\Index.cshtml" />
+    <Content Include="Views\Paychecks\Create.cshtml" />
+    <Content Include="Views\Taxes\Create.cshtml" />
+    <Content Include="Views\Paychecks\Delete.cshtml" />
+    <Content Include="Views\Paychecks\Details.cshtml" />
+    <Content Include="Views\Paychecks\Edit.cshtml" />
+    <Content Include="Views\Paychecks\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Paychecks\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

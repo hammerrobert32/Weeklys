@@ -10,6 +10,10 @@ namespace Weeklys.Models
 {
     public class PaychecksCreate
     {
+        [Required]
+        public int MoneyFlowID { get; set; }
+
+        [Required]
         public Name Name { get; set; }
 
         [Required]

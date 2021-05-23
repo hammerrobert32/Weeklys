@@ -55,37 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202104152323231_InitialCreate.cs" />
-    <Compile Include="Migrations\202104152323231_InitialCreate.Designer.cs">
-      <DependentUpon>202104152323231_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104160223343_InitialMigration.cs" />
-    <Compile Include="Migrations\202104160223343_InitialMigration.Designer.cs">
-      <DependentUpon>202104160223343_InitialMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104172326445_Second-Migration.cs" />
-    <Compile Include="Migrations\202104172326445_Second-Migration.Designer.cs">
-      <DependentUpon>202104172326445_Second-Migration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104172328317_SecondMigration1.cs" />
-    <Compile Include="Migrations\202104172328317_SecondMigration1.Designer.cs">
-      <DependentUpon>202104172328317_SecondMigration1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104252010101_UpdatedMoneyFlowDataAnnotations.cs" />
-    <Compile Include="Migrations\202104252010101_UpdatedMoneyFlowDataAnnotations.Designer.cs">
-      <DependentUpon>202104252010101_UpdatedMoneyFlowDataAnnotations.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104252024423_AddedGuidToAllTables.cs" />
-    <Compile Include="Migrations\202104252024423_AddedGuidToAllTables.Designer.cs">
-      <DependentUpon>202104252024423_AddedGuidToAllTables.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105212101475_LastMigration.cs" />
-    <Compile Include="Migrations\202105212101475_LastMigration.Designer.cs">
-      <DependentUpon>202105212101475_LastMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105220046004_LastLastMigration.cs" />
-    <Compile Include="Migrations\202105220046004_LastLastMigration.Designer.cs">
-      <DependentUpon>202105220046004_LastLastMigration.cs</DependentUpon>
+    <Compile Include="Migrations\202105222249049_FirstMigration.cs" />
+    <Compile Include="Migrations\202105222249049_FirstMigration.Designer.cs">
+      <DependentUpon>202105222249049_FirstMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Paychecks.cs" />
@@ -98,29 +70,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202104152323231_InitialCreate.resx">
-      <DependentUpon>202104152323231_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104160223343_InitialMigration.resx">
-      <DependentUpon>202104160223343_InitialMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104172326445_Second-Migration.resx">
-      <DependentUpon>202104172326445_Second-Migration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104172328317_SecondMigration1.resx">
-      <DependentUpon>202104172328317_SecondMigration1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104252010101_UpdatedMoneyFlowDataAnnotations.resx">
-      <DependentUpon>202104252010101_UpdatedMoneyFlowDataAnnotations.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104252024423_AddedGuidToAllTables.resx">
-      <DependentUpon>202104252024423_AddedGuidToAllTables.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105212101475_LastMigration.resx">
-      <DependentUpon>202105212101475_LastMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105220046004_LastLastMigration.resx">
-      <DependentUpon>202105220046004_LastLastMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105222249049_FirstMigration.resx">
+      <DependentUpon>202105222249049_FirstMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -29,13 +29,13 @@ namespace Weeklys.WebMVC.Controllers
                                                                                                      // CREATES Paychecks to database
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(PaychecksCreate model)
+        public ActionResult Create(PaychecksCreate model, int moneyFlowID)
         {
             if (!ModelState.IsValid) return View(model);
 
             var service = CreatePaychecksService();
 
-            if (service.CreatePaychecks(model))
+            if (service.CreatePaychecks(model, moneyFlowID))
             {
                 TempData["SaveResult"] = "Your Paychecks were created.";
                 return RedirectToAction("Index");
@@ -46,7 +46,7 @@ namespace Weeklys.WebMVC.Controllers
             return View(model);
         }
 
-                                                                                                      // Gets VIEW for single Paychecks
+                                                                                                     // Gets VIEW for single Paychecks
         public ActionResult Details(int ID)
         {
             var svc = CreatePaychecksService();

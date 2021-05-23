@@ -17,12 +17,13 @@ namespace Weeklys.Services
             _userID = userID;
         }
 
-        public bool CreateTaxes(TaxesCreate model)
+        public bool CreateTaxes(TaxesCreate model, int moneyFlowID)
         {
             var entity =
                 new Taxes()
                 {
                     OwnerID = _userID,
+                    TaxesID = moneyFlowID,
                     State = model.State,
                     Federal = model.Federal,
                     CreatedUtc = DateTimeOffset.Now

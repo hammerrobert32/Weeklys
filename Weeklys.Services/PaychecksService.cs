@@ -17,12 +17,13 @@ namespace Weeklys.Services
             _userID = userID;
         }
 
-        public bool CreatePaychecks(PaychecksCreate model)
+        public bool CreatePaychecks(PaychecksCreate model, int moneyFlowID)
         {
             var entity =
                 new Paychecks()
                 {
                     OwnerID = _userID,
+                    MoneyFlowID = moneyFlowID,
                     Name = model.Name,
                     AmountPaid = model.AmountPaid,
                     CreatedUtc = DateTimeOffset.Now

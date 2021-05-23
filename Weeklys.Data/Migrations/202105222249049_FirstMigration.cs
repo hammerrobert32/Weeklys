@@ -3,10 +3,39 @@ namespace Weeklys.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class FirstMigration : DbMigration
     {
         public override void Up()
         {
+            CreateTable(
+                "dbo.MoneyFlow",
+                c => new
+                    {
+                        MoneyFlowID = c.Int(nullable: false, identity: true),
+                        OwnerID = c.Guid(nullable: false),
+                        Revenue = c.Double(nullable: false),
+                        Expenses = c.Double(nullable: false),
+                        TaxesSum = c.Double(nullable: false),
+                        Profit = c.Double(nullable: false),
+                        CreatedUtc = c.DateTimeOffset(nullable: false, precision: 7),
+                    })
+                .PrimaryKey(t => t.MoneyFlowID);
+            
+            CreateTable(
+                "dbo.Paychecks",
+                c => new
+                    {
+                        PaychecksID = c.Int(nullable: false, identity: true),
+                        OwnerID = c.Guid(nullable: false),
+                        Name = c.Int(nullable: false),
+                        AmountPaid = c.Double(nullable: false),
+                        MoneyFlowID = c.Int(nullable: false),
+                        CreatedUtc = c.DateTimeOffset(nullable: false, precision: 7),
+                    })
+                .PrimaryKey(t => t.PaychecksID)
+                .ForeignKey("dbo.MoneyFlow", t => t.MoneyFlowID, cascadeDelete: true)
+                .Index(t => t.MoneyFlowID);
+            
             CreateTable(
                 "dbo.IdentityRole",
                 c => new
@@ -30,6 +59,20 @@ namespace Weeklys.Data.Migrations
                 .ForeignKey("dbo.ApplicationUser", t => t.ApplicationUser_Id)
                 .Index(t => t.IdentityRole_Id)
                 .Index(t => t.ApplicationUser_Id);
+            
+            CreateTable(
+                "dbo.Taxes",
+                c => new
+                    {
+                        TaxesID = c.Int(nullable: false),
+                        OwnerID = c.Guid(nullable: false),
+                        State = c.Double(nullable: false),
+                        Federal = c.Double(nullable: false),
+                        CreatedUtc = c.DateTimeOffset(nullable: false, precision: 7),
+                    })
+                .PrimaryKey(t => t.TaxesID)
+                .ForeignKey("dbo.MoneyFlow", t => t.TaxesID)
+                .Index(t => t.TaxesID);
             
             CreateTable(
                 "dbo.ApplicationUser",
@@ -77,19 +120,6 @@ namespace Weeklys.Data.Migrations
                 .ForeignKey("dbo.ApplicationUser", t => t.ApplicationUser_Id)
                 .Index(t => t.ApplicationUser_Id);
             
-            CreateTable(
-                "dbo.Weekly",
-                c => new
-                    {
-                        WeeklyID = c.Int(nullable: false, identity: true),
-                        Revenue = c.Double(nullable: false),
-                        Expenses = c.Double(nullable: false),
-                        TaxesSum = c.Double(),
-                        Profit = c.Double(),
-                        CreatedUtc = c.DateTimeOffset(nullable: false, precision: 7),
-                    })
-                .PrimaryKey(t => t.WeeklyID);
-            
         }
         
         public override void Down()
@@ -97,17 +127,23 @@ namespace Weeklys.Data.Migrations
             DropForeignKey("dbo.IdentityUserRole", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserLogin", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserClaim", "ApplicationUser_Id", "dbo.ApplicationUser");
+            DropForeignKey("dbo.Taxes", "TaxesID", "dbo.MoneyFlow");
             DropForeignKey("dbo.IdentityUserRole", "IdentityRole_Id", "dbo.IdentityRole");
+            DropForeignKey("dbo.Paychecks", "MoneyFlowID", "dbo.MoneyFlow");
             DropIndex("dbo.IdentityUserLogin", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserClaim", new[] { "ApplicationUser_Id" });
+            DropIndex("dbo.Taxes", new[] { "TaxesID" });
             DropIndex("dbo.IdentityUserRole", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserRole", new[] { "IdentityRole_Id" });
-            DropTable("dbo.Weekly");
+            DropIndex("dbo.Paychecks", new[] { "MoneyFlowID" });
             DropTable("dbo.IdentityUserLogin");
             DropTable("dbo.IdentityUserClaim");
             DropTable("dbo.ApplicationUser");
+            DropTable("dbo.Taxes");
             DropTable("dbo.IdentityUserRole");
             DropTable("dbo.IdentityRole");
+            DropTable("dbo.Paychecks");
+            DropTable("dbo.MoneyFlow");
         }
     }
 }

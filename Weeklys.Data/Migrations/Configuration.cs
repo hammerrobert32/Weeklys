@@ -10,7 +10,6 @@ namespace Weeklys.Data.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "Weeklys.Data.ApplicationDbContext";
         }
 
         protected override void Seed(Weeklys.Data.ApplicationDbContext context)

@@ -7,13 +7,13 @@ namespace Weeklys.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class AddedGuidToAllTables : IMigrationMetadata
+    public sealed partial class FirstMigration : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedGuidToAllTables));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(FirstMigration));
         
         string IMigrationMetadata.Id
         {
-            get { return "202104252024423_AddedGuidToAllTables"; }
+            get { return "202105222249049_FirstMigration"; }
         }
         
         string IMigrationMetadata.Source
