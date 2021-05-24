@@ -29,13 +29,13 @@ namespace Weeklys.WebMVC.Controllers
                                                                                                               // CREATES Taxes to database
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(TaxesCreate model, int ID)
+        public ActionResult Create(TaxesCreate model, int moneyFlowID)
         {
             if (!ModelState.IsValid) return View(model);
 
             var service = CreateTaxesService();
 
-            if (service.CreateTaxes(model, ID))
+            if (service.CreateTaxes(model, moneyFlowID))
             {
                 TempData["SaveResult"] = "Your Taxes were created.";
                 return RedirectToAction("Index");
