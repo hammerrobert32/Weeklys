@@ -11,24 +11,15 @@
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    @if (User.Identity.IsAuthenticated)
-                    {
-                        <li>@Html.ActionLink("MoneyFlows", "Index", "MoneyFlow")</li>
-                        <li>@Html.ActionLink("Paychecks", "Index", "Paychecks")</li>
-                        <li>@Html.ActionLink("Taxes", "Index", "Taxes")</li>
-                    }
+            <div class="navbar-fixed-top ">
+                <ul class="nav navbar-expand">
+                    <li class="nav-item">@Html.ActionLink("MoneyFlows", "Index", "MoneyFlow")</li> |
+                    <li class="nav-item">@Html.ActionLink("Paychecks", "Index", "Paychecks")</li> |
+                    <li class="nav-item">@Html.ActionLink("Taxes", "Index", "Taxes")</li> |
+                    <li>@Html.Partial("_LoginPartial")</li>
                 </ul>
-                @Html.Partial("_LoginPartial")
             </div>
+
         </div>
     </div>
     <div class="container body-content">
